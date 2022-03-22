@@ -1,26 +1,34 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/destructuring-assignment */
 import React from "react";
-import "../styles/App.css";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
+import ForecastSummaries from "./forecastSummaries";
 
 function App(props) {
+  const { location, forecasts } = props;
   return (
-    <div className="App">
-      <LocationDetails
-        city={props.location.city}
-        country={props.location.country}
-      />
+    <div className="forecast">
+      <LocationDetails city={location.city} country={location.country} />
+      <ForecastSummaries forecast={forecasts} />
     </div>
   );
 }
 
 App.propTypes = {
+  forecasts: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.number.isRequired,
+      description: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      temperature: PropTypes.shape({
+        min: PropTypes.number,
+        max: PropTypes.number,
+      }),
+    })
+  ).isRequired,
   location: PropTypes.shape({
     city: PropTypes.string,
     country: PropTypes.string,
-  }).isRequired, // Why isRequired on the outer scope?
+  }).isRequired,
 };
 
 export default App;
