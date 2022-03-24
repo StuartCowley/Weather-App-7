@@ -7,9 +7,9 @@ describe("ForecastSummaries", () => {
   const validProps = [
     // why array?
     {
-      date: 2222,
+      date: 1111,
       description: " Stub description 1.0",
-      icon: "stubIcon 1.0",
+      icon: "800",
       temperature: {
         min: 12,
         max: 22,
@@ -18,7 +18,7 @@ describe("ForecastSummaries", () => {
     {
       date: 3333,
       description: " Stub description 2.0",
-      icon: "stubIcon 2.0",
+      icon: "602",
       temperature: {
         min: 1,
         max: 10,

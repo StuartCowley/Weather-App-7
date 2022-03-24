@@ -12,7 +12,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <div
         class="forecast-summary_date"
       >
-        2222
+        Thu 4th Jan
       </div>
       <div
         class="forecast-summary_description"
@@ -23,7 +23,10 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary_icon"
         data-testid="forecast-icon"
       >
-        stubIcon 1.0
+        <i
+          class="wi wi-day-sunny"
+          name="owm"
+        />
       </div>
       <div
         class="forecast-summary_temperature"
@@ -38,7 +41,7 @@ exports[`ForecastSummaries renders correctly 1`] = `
       <div
         class="forecast-summary_date"
       >
-        3333
+        Thu 4th Jan
       </div>
       <div
         class="forecast-summary_description"
@@ -49,7 +52,10 @@ exports[`ForecastSummaries renders correctly 1`] = `
         class="forecast-summary_icon"
         data-testid="forecast-icon"
       >
-        stubIcon 2.0
+        <i
+          class="wi wi-day-snow"
+          name="owm"
+        />
       </div>
       <div
         class="forecast-summary_temperature"
