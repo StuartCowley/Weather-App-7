@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./forecastSummaries";
 import "../styles/App.css";
+import ForecastDetails from "./forecastDetails";
 
 function App(props) {
   const { location, forecasts } = props;
@@ -10,6 +11,7 @@ function App(props) {
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries forecast={forecasts} />
+      <ForecastDetails forecast={forecasts[0]} />
     </div>
   );
 }
