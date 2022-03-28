@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import ForecastSummaries from "../components /forecastSummaries";
-import ForecastSummary from "../components /forecastSummary";
 
 describe("ForecastSummaries", () => {
   const validProps = {
@@ -42,7 +41,7 @@ describe("ForecastSummaries", () => {
   it("renders the correct number of ForecastSummary instances", () => {
     const { getAllByTestId } = render(
       <ForecastSummaries
-        forecast={validProps.onForecastSelect}
+        forecast={validProps.forecast}
         onForecastSelect={validProps.onForecastSelect}
       />
     );

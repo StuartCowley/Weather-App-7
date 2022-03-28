@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getForecast = (setForecasts, setSelectedDate, setLocation) => {
+const getForecast = (setSelectedDate, setForecasts, setLocation) => {
   const endpoint = "https://mcr-codes-weather-app.herokuapp.com/forecast";
 
   axios.get(endpoint).then((response) => {
