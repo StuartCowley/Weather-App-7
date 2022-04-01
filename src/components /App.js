@@ -24,7 +24,7 @@ function App() {
       setSelectedDate,
       setForecasts,
       setLocation,
-      setSearchText,
+      searchText,
       setErrorMessage
     );
   }, []);
